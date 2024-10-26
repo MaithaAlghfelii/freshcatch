@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Fresh Catch - My Cart</title>
+    <style>
+        body {
+            font-family: 'Poppins', Arial, sans-serif;
+            background-color: #F8F9FA;
+            margin: 0;
+            padding: 0;
+        }
+        .header {
+            background-color: #1D3557;
+            padding: 20px;
+            color: #ffffff;
+            text-align: center;
+        }
+        .header img {
+            width: 60px;
+            height: auto;
+        }
+        .content {
+            padding: 20px;
+        }
+        .cart-item {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 15px;
+            background-color: #ffffff;
+            border-radius: 16px;
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+        }
+        .cart-item img {
+            width: 80px;
+            height: auto;
+            border-radius: 8px;
+        }
+        .cart-item-details {
+            flex-grow: 1;
+            margin-left: 15px;
+        }
+        .cart-item h3 {
+            color: #2c3e50;
+            font-size: 16px;
+            margin: 0;
+        }
+        .cart-item p {
+            color: #7f8c8d;
+            margin: 5px 0;
+            font-size: 14px;
+        }
+        .quantity-controls {
+            display: flex;
+            align-items: center;
+        }
+        .quantity-controls button {
+            background-color: #1D3557;
+            color: #ffffff;
+            border: none;
+            border-radius: 8px;
+            padding: 10px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .quantity-controls button:hover {
+            background-color: #011b40;
+        }
+        .cart-item-price {
+            color: #2c3e50;
+            font-size: 16px;
+            font-weight: 600;
+        }
+        .checkout-btn {
+            width: 100%;
+            padding: 15px;
+            background-color: #1D3557;
+            color: #ffffff;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            text-align: center;
+            font-size: 18px;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+        .checkout-btn:hover {
+            background-color: #011b40;
+        }
+        .footer {
+            background-color: #1D3557;
+            padding: 10px;
+            color: #ffffff;
+            text-align: center;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+        .footer a {
+            color: #ffffff;
+            text-decoration: none;
+            margin: 0 15px;
+        }
+    </style>
+    <script>
+        function updateQuantity(action) {
+            const quantityElement = document.getElementById('quantity');
+            let quantity = parseInt(quantityElement.innerText);
+            if (action === 'increase') {
+                quantity++;
+            } else if (action === 'decrease' && quantity > 1) {
+                quantity--;
+            }
+            quantityElement.innerText = quantity;
+        }
+    </script>
+</head>
+<body>
+    <div class="header">
+        <img src="logo2.png" alt="Fresh Catch Logo">
+        <h2>My Cart</h2>
+    </div>
+    <div class="content">
+        <div class="cart-item">
+            <img src="fish1.png" alt="Fresh Sheri">
+            <div class="cart-item-details">
+                <h3>Fresh Sheri</h3>
+                <p>1.1kg, Price</p>
+            </div>
+            <div class="quantity-controls">
+                <button onclick="updateQuantity('decrease')">-</button>
+                <span id="quantity" style="margin: 0 10px;">1</span>
+                <button onclick="updateQuantity('increase')">+</button>
+            </div>
+            <div class="cart-item-price">AED 35.42</div>
+        </div>
+        <button class="checkout-btn" onclick="window.location.href='checkOutPage.html'">Go to Checkout</button>
+    </div>
+    <div class="footer">
+        <a href="shop.html">Shop</a>
+        <a href="explore.html">Explore</a>
+        <a href="cart.html">Cart</a>
+        <a href="favourite.html">Favourite</a>
+        <a href="account.html">Account</a>
+    </div>
+</body>
+</html>

@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Fresh Catch - Checkout</title>
+    <style>
+        body {
+            font-family: 'Poppins', Arial, sans-serif;
+            background-color: #F8F9FA;
+            margin: 0;
+            padding: 0;
+        }
+        .header {
+            background-color: #1D3557;
+            padding: 20px;
+            color: #ffffff;
+            text-align: center;
+        }
+        .header img {
+            width: 60px;
+            height: auto;
+        }
+        .content {
+            padding: 20px;
+        }
+        .checkout-container {
+            background-color: #ffffff;
+            border-radius: 16px;
+            padding: 20px;
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+        }
+        .checkout-item {
+            margin-bottom: 20px;
+        }
+        .checkout-item label {
+            display: block;
+            color: #2c3e50;
+            font-weight: 500;
+            margin-bottom: 8px;
+        }
+        .checkout-item input[type="text"],
+        .checkout-item select {
+            width: 100%;
+            padding: 10px;
+            border-radius: 8px;
+            border: 1px solid #ddd;
+            font-size: 16px;
+        }
+        .payment-methods {
+            display: flex;
+            gap: 10px;
+            margin-top: 10px;
+        }
+        .payment-methods button {
+            flex-grow: 1;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            background-color: #ffffff;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .payment-methods button.selected {
+            background-color: #1D3557;
+            color: #ffffff;
+        }
+        .checkout-btn {
+            width: 100%;
+            padding: 15px;
+            background-color: #1D3557;
+            color: #ffffff;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            text-align: center;
+            font-size: 18px;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            margin-top: 20px;
+        }
+        .checkout-btn:hover {
+            background-color: #011b40;
+        }
+        .footer {
+            background-color: #1D3557;
+            padding: 10px;
+            color: #ffffff;
+            text-align: center;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+        .footer a {
+            color: #ffffff;
+            text-decoration: none;
+            margin: 0 15px;
+        }
+    </style>
+    <script>
+        function selectPaymentMethod(method) {
+            const buttons = document.querySelectorAll('.payment-methods button');
+            buttons.forEach(button => button.classList.remove('selected'));
+            document.getElementById(method).classList.add('selected');
+        }
+    </script>
+</head>
+<body>
+    <div class="header">
+        <img src="logo2.png" alt="Fresh Catch Logo">
+        <h2>Checkout</h2>
+    </div>
+    <div class="content">
+        <div class="checkout-container">
+            <div class="checkout-item">
+                <label for="delivery-location">Delivery Location</label>
+                <input type="text" id="delivery-location" placeholder="Enter your delivery location">
+            </div>
+            <div class="checkout-item">
+                <label>Payment Method</label>
+                <div class="payment-methods">
+                    <button id="apple-pay" onclick="selectPaymentMethod('apple-pay')">Apple Pay</button>
+                    <button id="cash" onclick="selectPaymentMethod('cash')">Cash on Delivery</button>
+                    <button id="card" onclick="selectPaymentMethod('card')">Card</button>
+                </div>
+            </div>
+            <div class="checkout-item">
+                <label for="promo-code">Promo Code</label>
+                <input type="text" id="promo-code" placeholder="Enter code">
+            </div>
+            <div class="checkout-item">
+                <label>Total Cost</label>
+                <p>45.5 AED</p>
+            </div>
+            <button class="checkout-btn" onclick="window.location.href='thankYouPage.html'">Place Order</button>
+        </div>
+    </div>
+    <div class="footer">
+        <a href="shop.html">Shop</a>
+        <a href="explore.html">Explore</a>
+        <a href="cart.html">Cart</a>
+        <a href="favourite.html">Favourite</a>
+        <a href="account.html">Account</a>
+    </div>
+</body>
+</html>

@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+    <title>Fresh Catch - Sign Up</title>
+    <style>
+        body {
+            font-family: 'Poppins', Arial, sans-serif;
+            background-color: #f0f8ff;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+        }
+        .signup-container {
+            width: 100%;
+            max-width: 400px;
+            padding: 40px;
+            background-color: #ffffff;
+            border-radius: 16px;
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+        }
+        .signup-logo {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+        .signup-logo img {
+            width: 80px;
+            height: auto;
+        }
+        h2 {
+            color: #2c3e50;
+            text-align: center;
+            font-size: 24px;
+            font-weight: 600;
+            margin-bottom: 5px;
+        }
+        .form-group {
+            margin-bottom: 20px;
+        }
+        label {
+            display: block;
+            color: #2c3e50;
+            font-weight: 500;
+            margin-bottom: 8px;
+        }
+        input[type="text"], input[type="email"], input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            font-size: 16px;
+        }
+        .terms {
+            color: #7f8c8d;
+            font-size: 12px;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .terms a {
+            color: #2c3e50;
+            text-decoration: none;
+        }
+        .terms a:hover {
+            text-decoration: underline;
+        }
+        .btn-signup {
+            width: 100%;
+            padding: 15px;
+            background-color: #012D60;
+            color: #ffffff;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            text-align: center;
+            font-size: 18px;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+        .btn-signup:hover {
+            background-color: #011b40;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+        }
+        .already-have-account {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 14px;
+        }
+        .already-have-account a {
+            color: #012D60;
+            text-decoration: none;
+        }
+        .already-have-account a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="signup-container">
+        <div class="signup-logo">
+            <img src="Group 6893.png" alt="Fresh Catch Logo">
+        </div>
+        <h2>Sign Up</h2>
+        <form action="licensePage.html" method="POST">
+            <div class="form-group">
+                <label for="username">Username</label>
+                <input type="text" id="username" name="username" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+            <p class="terms">By continuing you agree to our <a href="#">Terms of Service</a> and <a href="#">Privacy Policy</a>.</p>
+            <button type="submit" class="btn-signup">Sign Up</button>
+        </form>
+        <p class="already-have-account">Already have an account? <a href="logInPage.html">Log In</a></p>
+    </div>
+</body>
+</html>

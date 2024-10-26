@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Fresh Catch - Add Product</title>
+    <style>
+        body {
+            font-family: 'Poppins', Arial, sans-serif;
+            background-color: #F8F9FA;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        .header {
+            background-color: #1D3557;
+            width: 100%;
+            padding: 20px;
+            text-align: center;
+            color: #ffffff;
+        }
+        .header img {
+            width: 60px;
+            height: auto;
+        }
+        .content-table {
+            width: 80%;
+            padding: 20px;
+            background-color: #ffffff;
+            border-radius: 16px;
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+            margin-top: 40px;
+        }
+        h2 {
+            color: #1D3557;
+            text-align: center;
+            font-size: 24px;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+        .form-group {
+            margin-bottom: 20px;
+        }
+        label {
+            display: block;
+            color: #2c3e50;
+            font-weight: 500;
+            margin-bottom: 8px;
+        }
+        input[type="text"], input[type="number"], select {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            font-size: 16px;
+        }
+        .btn-container {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+        .btn-add-product {
+            padding: 15px;
+            background-color: #012D60;
+            color: #ffffff;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 18px;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+        .btn-add-product:hover {
+            background-color: #011b40;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <img src="logo2.png" alt="Fresh Catch Logo">
+    </div>
+    <table class="content-table">
+        <tr>
+            <td>
+                <h2>Add Product</h2>
+                <form action="fishermanPage.html" method="POST">
+                    <div class="form-group">
+                        <label for="fish-type">Fish Type:</label>
+                        <select id="fish-type" name="fish-type" required>
+                            <option value="">Choose Type</option>
+                            <option value="safi">Safi</option>
+                            <option value="sheri">Sheri</option>
+                            <option value="hamour">Hamour</option>
+                            <option value="red_snapper">Red Snapper</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="weight">Weight (g/kg):</label>
+                        <input type="text" id="weight" name="weight" placeholder="e.g. 500" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="quantity">Fish Quantity:</label>
+                        <input type="number" id="quantity" name="quantity" min="1" value="1" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="catch-date">Catch Date:</label>
+                        <input type="date" id="catch-date" name="catch-date" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="expiry-date">Expiry Date:</label>
+                        <input type="date" id="expiry-date" name="expiry-date" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="price">Price (AED):</label>
+                        <input type="text" id="price" name="price" placeholder="e.g. 50" required>
+                    </div>
+                    <div class="btn-container">
+                        <button type="submit" class="btn-add-product">Add Product</button>
+                    </div>
+                </form>
+            </td>
+        </tr>
+    </table>
+</body>
+</html>

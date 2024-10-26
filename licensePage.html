@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+    <title>Fresh Catch - License Verification</title>
+    <style>
+        body {
+            font-family: 'Poppins', Arial, sans-serif;
+            background-color: #f0f8ff;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+        }
+        .license-container {
+            width: 100%;
+            max-width: 400px;
+            padding: 40px;
+            background-color: #ffffff;
+            border-radius: 16px;
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+        }
+        .back-button {
+            font-size: 24px;
+            color: #2c3e50;
+            cursor: pointer;
+            margin-bottom: 20px;
+        }
+        label {
+            display: block;
+            color: #2c3e50;
+            font-weight: 500;
+            margin-bottom: 20px;
+            font-size: 20px;
+        }
+        input[type="text"] {
+            width: 100%;
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            font-size: 16px;
+            text-align: center;
+            color: #7f8c8d;
+            font-style: italic;
+        }
+            .btn-confirm {
+            width: 100%;
+            padding: 15px;
+            background-color: #012D60;
+            color: #ffffff;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            text-align: center;
+            font-size: 18px;
+            font-weight: 500;
+            margin-top: 20px;
+            transition: all 0.3s ease;
+        }
+        .btn-confirm:hover {
+            background-color: #011b40;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+        }
+</style>
+</head>
+<body>
+    <div class="license-container">
+        <div class="signup-logo" style="text-align: center; margin-bottom: 20px;">
+            <img src="Group 6893.png" alt="Fresh Catch Logo" style="width: 80px; height: auto;">
+        </div>
+        <div class="back-button" onclick="window.history.back();">&larr;</div>
+        <label for="license">Enter your license number</label>
+        <input type="text" id="license" name="license" placeholder="0000-0000-0000-0000" required>
+        <button type="button" class="btn-confirm" onclick="window.location.href='verifiedPage.html'">Confirm</button>
+    </div>
+
+    <script>
+        function confirmLicense() {
+            // Add any JavaScript logic here to handle the license confirmation
+            alert('License number confirmed');
+        }
+    </script>
+</body>
+</html>
